@@ -4,7 +4,7 @@ function start() {
     let x = pixel % canvas.width
     let y = Math.floor(pixel / canvas.width)
     
-    canvas.fillRect(x, y, 1, 1)
+    ctx.fillRect(x, y, 1, 1)
     
     pixel++
     requestAnimationFrame(start)
