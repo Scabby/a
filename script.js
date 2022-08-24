@@ -1,12 +1,27 @@
 function draw() {
-    if(pixel >= canvas.width * canvas.height) { return }
+    refresh()
     
-    let x = pixel % canvas.width
-    let y = Math.floor(pixel / canvas.width)
+    for(let p = 0; p < canvas.width * canvas.height; p++) {
+        let x = p % canvas.width
+        let y = Math.floor(p / canvas.width)
+        
+        if(Math.random() > 0.5) { ctx.fillStyle = "#000000" }
+        else                    { ctx.fillStyle = "#ffffff" }
+        
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+    }
     
-    ctx.fillRect(x, y, 1, 1)
-    pixel++
     requestAnimationFrame(draw)
+}
+
+function set(x, y) {
+    ctx.fillRect(x, y, 1, 1)
+}
+
+function refresh() {
+    ctx.canvas.width    = window.innerWidth
+    ctx.canvas.height   = window.innerHeight
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 }
 
 onload = () => {
@@ -14,8 +29,5 @@ onload = () => {
     ctx     = canvas.getContext("2d")
     pixel   = 0
 
-    ctx.fillStyle = "#000000"
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
-    ctx.fillStyle = "#ffffff"
     requestAnimationFrame(draw)
 }
