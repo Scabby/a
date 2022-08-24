@@ -14,7 +14,9 @@ onready = () => {
     canvas  = document.getElementsByTagName("canvas")[0]
     ctx     = canvas.getContext("2d")
     pixel   = 0
-    
+
     ctx.fillStyle = "#000000"
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    ctx.fillStyle = "ffffff"
     start()
 }
