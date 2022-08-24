@@ -1,6 +1,7 @@
 function draw() {
     refresh()
     
+    /*
     for(let p = 0; p < canvas.width * canvas.height; p++) {
         let x = p % canvas.width
         let y = Math.floor(p / canvas.width)
@@ -10,6 +11,10 @@ function draw() {
         
         ctx.fillRect(x, y, 1, 1)
     }
+    */
+    
+    ctx.fillStyle = "#ffffff"
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
     
     requestAnimationFrame(draw)
 }
