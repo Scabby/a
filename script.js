@@ -6,6 +6,7 @@ function draw() {
     
     ctx.fillRect(x, y, 1, 1)
     pixel++
+    requestAnimationFrame(draw)
 }
 
 onload = () => {
@@ -16,5 +17,5 @@ onload = () => {
     ctx.fillStyle = "#000000"
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     ctx.fillStyle = "#ffffff"
-    setTimeout(draw, 16)
+    requestAnimationFrame(draw)
 }
