@@ -5,11 +5,10 @@ function draw() {
     let y = Math.floor(pixel / canvas.width)
     
     ctx.fillRect(x, y, 1, 1)
-    
     pixel++
 }
 
-onready = () => {
+onload = () => {
     canvas  = document.getElementsByTagName("canvas")[0]
     ctx     = canvas.getContext("2d")
     pixel   = 0
