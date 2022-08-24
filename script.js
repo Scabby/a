@@ -1,4 +1,4 @@
-function start() {
+function draw() {
     if(pixel >= canvas.width * canvas.height) { return }
     
     let x = pixel % canvas.width
@@ -7,7 +7,6 @@ function start() {
     ctx.fillRect(x, y, 1, 1)
     
     pixel++
-    requestAnimationFrame(start)
 }
 
 onready = () => {
@@ -18,5 +17,5 @@ onready = () => {
     ctx.fillStyle = "#000000"
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     ctx.fillStyle = "ffffff"
-    start()
+    setTimeout(draw, 16)
 }
