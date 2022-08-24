@@ -8,7 +8,7 @@ function draw() {
         if(Math.random() > 0.5) { ctx.fillStyle = "#000000" }
         else                    { ctx.fillStyle = "#ffffff" }
         
-        ctx.fillRect(0, 0, canvas.width, canvas.height)
+        ctx.fillRect(x, y, 1, 1)
     }
     
     requestAnimationFrame(draw)
