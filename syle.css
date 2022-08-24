@@ -9,3 +9,14 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+canvas {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    object-fit: contain;
+    position: fixed;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
