@@ -21,5 +21,6 @@ onload = () => {
     canvas  = document.getElementsByTagName("canvas")[0]
     gl      = canvas.getContext("webgl")
 
+    resize()
     requestAnimationFrame(draw)
 }
