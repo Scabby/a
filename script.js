@@ -11,7 +11,7 @@ function resize() {
 }
 
 function clear() {
-    gl.clearColor(1, 0, 1, 1)
+    gl.clearColor(1, 1, 1, 1)
     gl.clear(gl.COLOR_BUFFER_BIT)
 }
 
