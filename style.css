@@ -1,18 +1,8 @@
-*, html {
+html, body {
+    color: #fff;
     background-color: #000;
-    overflow: hidden;
     margin: 0;
     padding: 0;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-canvas {
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    object-fit: contain;
-    position: fixed;
+    font-family: 'Space Mono', 'Roboto Mono', monospace, monospace;
+    font-size: 12px;
 }
